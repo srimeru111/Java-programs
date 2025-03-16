@@ -1,0 +1,70 @@
+1. Array Concatenation
+import java.util.Scanner;
+public class  ArrayConcatenation{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter size of array1: ");
+        int n = sc.nextInt();
+        int[] a = new int[n];
+        
+         System.out.println("enter array1 elements:");
+        for (int i = 0; i <n; i++) {
+           a[i]=sc.nextInt();
+            }
+            System.out.print("Enter size of array2: ");
+        int m = sc.nextInt();
+        int[] b = new int[m];
+         int[] cat = new int[n+m];
+        System.out.println("enter array2 elements:");
+            for (int i = 0; i <m; i++) {
+           b[i]=sc.nextInt();
+            }
+            int index=0;
+          for (int i = 0; i <n; i++) {
+              cat[index++]=a[i];
+          }
+          for (int i = 0; i <m; i++) {
+              cat[index++]=b[i];
+          }
+          System.out.println("Concatenated array:");
+          for (int i = 0; i <n+m; i++) {
+              System.out.print(cat[i]+" ");
+          }
+            }
+}
+2. Check if two arrays are equal
+import java.util.Scanner;
+public class  CheckArrayEqual {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.print("Enter size of array1: ");
+        int n = sc.nextInt();
+        int[] a = new int[n];
+         System.out.print("Enter size of array2: ");
+        int m = sc.nextInt();
+        int[] b = new int[m];
+        if(m!=n)
+        System.out.println("Arrays are not equal");
+        else{
+         System.out.println("Enter array1 elements:");
+        for (int i = 0; i <n; i++) {
+           a[i]=sc.nextInt();
+        }
+        System.out.println("Enter array2 elements:");
+            for (int i = 0; i <m; i++) {
+           b[i]=sc.nextInt();
+            }
+            int flag=0;
+          for (int i = 0; i <n; i++) 
+              if(a[i]!=b[i])
+               flag=1;
+
+              if(flag==0)
+              System.out.println("Arrays are equal");
+              else
+              System.out.println("Arrays are not equal");
+            }
+    }
+}
